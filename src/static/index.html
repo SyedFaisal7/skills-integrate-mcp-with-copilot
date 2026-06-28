@@ -21,6 +21,14 @@
         </div>
       </section>
 
+      <section id="map-container">
+        <h3>Activity Map</h3>
+        <div id="map" aria-label="Interactive map of extracurricular activities"></div>
+        <div id="selected-activity" class="selected-activity">
+          Select an activity card or map marker to see details.
+        </div>
+      </section>
+
       <section id="signup-container">
         <h3>Sign Up for an Activity</h3>
         <form id="signup-form">
@@ -45,6 +53,8 @@
       <p>&copy; 2026 Mergington High School</p>
     </footer>
 
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
     <script src="app.js"></script>
   </body>
 </html>
