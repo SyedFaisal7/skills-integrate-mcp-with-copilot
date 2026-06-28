@@ -35,12 +35,6 @@ main {
   justify-content: center;
 }
 
-@media (min-width: 768px) {
-  main {
-    grid-template-columns: 2fr 1fr;
-  }
-}
-
 section {
   background-color: white;
   padding: 20px;
@@ -48,6 +42,64 @@ section {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   width: 100%;
   max-width: 500px;
+}
+
+#map-container {
+  max-width: 100%;
+}
+
+#map {
+  width: 100%;
+  height: 320px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+.selected-activity {
+  padding: 12px;
+  border-radius: 6px;
+  background-color: #f3f7ff;
+  color: #1a237e;
+  border: 1px solid #dfe8ff;
+  line-height: 1.5;
+}
+
+.leaflet-container {
+  font: inherit;
+}
+
+.map-pin-wrapper {
+  background: transparent;
+  border: none;
+}
+
+.map-pin {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+}
+
+.map-pin.sports {
+  background-color: #0f9d58;
+}
+
+.map-pin.arts {
+  background-color: #9c27b0;
+}
+
+.map-pin.technology {
+  background-color: #ff9800;
+}
+
+.map-pin.academics {
+  background-color: #1976d2;
+}
+
+.map-pin.general {
+  background-color: #6b7280;
 }
 
 section h3 {
@@ -63,6 +115,19 @@ section h3 {
   border: 1px solid #ddd;
   border-radius: 5px;
   background-color: #f9f9f9;
+  cursor: pointer;
+  transition: border-color 0.2s, box-shadow 0.2s, background-color 0.2s;
+}
+
+.activity-card:hover {
+  border-color: #1a237e;
+  box-shadow: 0 2px 6px rgba(26, 35, 126, 0.15);
+}
+
+.activity-card.selected {
+  background-color: #eef4ff;
+  border-color: #1a237e;
+  box-shadow: 0 2px 6px rgba(26, 35, 126, 0.15);
 }
 
 .activity-card h4 {
